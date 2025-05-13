@@ -53,12 +53,31 @@
 	<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=auuzywcc3p"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQDXR28SS0"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-BQDXR28SS0');
+    </script>
+	
+	<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+        // 카카오 초기화
+        Kakao.init('d6c49aa837f08d33b0a9f3d63aec9bef'); // 발급받은 JavaScript 키 입력
+
+        function shareKakao() {
+            Kakao.Link.sendCustom({
+                templateId: 120525,  // 카카오 디벨로퍼스에서 만든 템플릿 ID 입력
+                templateArgs: {
+                    'title': '오동균 ❤️ 제갈정연 결혼합니다!',
+                    'description': '2025년 6월 21일 (토) 오후 5시 소풍컨벤션웨딩 7층 라운제나홀',
+                    'imageUrl': 'https://noodlemarriage.github.io/wide/images/snt/view1.jpg',
+                    'webUrl': 'https://noodlemarriage.github.io/wide'
+                }
+            });
+        }
     </script>
 </head>
 
@@ -207,6 +226,12 @@
                 </div>
             </div>
             <!-- ROW-3 -->
+			<div id="btnKakao">
+            <img src="images/kakaoshare.png" id="kakao-link-btn" alt="카카오톡 링크 공유하기">
+            </div>
+			
+			<button id="kakao-share-btn" onclick="shareKakao()">카카오톡으로 공유하기</button>
+			
             <div class="row">
                 <div class="col-md-offset-2 col-md-8 text-center" style="padding-top: 100px">
                     <div style="margin-top: 20px;margin-bottom: 60px">
@@ -766,6 +791,16 @@
 
 
 </script>
+
+<script type='text/javascript'>
+    Kakao.init('d6c49aa837f08d33b0a9f3d63aec9bef');
+    Kakao.Link.createScrapButton({
+        container: '#kakao-link-btn',
+        requestUrl: 'https://noodlemarriage.github.io/wide',
+        templateId : 120525
+    });
+</script>
+
 <div class="copyright-wrap" style="
 margin: 0 auto;
     width: 80%;
