@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="">
 <head>
+    <style>
+  html, body {
+    background-color: #ffffff !important;
+  }
+
+  /* 배경 이미지/색이 지정된 섹션들 초기화 */
+  section,
+  .fullscreen,
+  .flexslider,
+  .slide-image,
+  #main-slider,
+  .slide-title-outter-wrapper,
+  .slide-title-inner-wrapper {
+    background: none !important;
+    background-color: transparent !important;
+  }
+
+  /* snow 효과, sakura 효과 강제 비활성화 (테스트용) */
+  #snow-bg,
+  .sakura {
+    display: none !important;
+  }
+</style>
     <title>이재국 ❤️ 안희수 의 결혼식에 초대합니다.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta property="og:image" content="https://noodlemarriage.github.io/wide/images/snt/view1.jpg"/>
@@ -80,83 +103,13 @@
     </script>
 </head>
 
-<body class="outside-bottom-bar-page pace-done">
+<body class="outside-bottom-bar-page pace-done" >
 <!--<div id="snow-bg" class="bg-eff-base fall-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">-->
 <!--</div>-->
-<div class="pace  pace-inactive">
-    <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
-        <div class="pace-progress-inner"></div>
-    </div>
-    <div class="pace-activity"></div>
-</div>
-<!--PRELOADER-->
-<div id="preloader" style="display: none;">
-
-    <div class="alignment">
-        <div class="v-align center-middle">
-
-            <!-- LEFT HEART -->
-            <div class="heart-animation">
-                <i class="de-icon-heart"></i>
-            </div>
-
-            <!-- RIGHT HEART -->
-            <div class="heart-animation-reverse">
-                <i class="de-icon-heart"></i>
-            </div>
-
-        </div>
-    </div>
-
-</div> <!--END of PRELOADER-->
 
 
-<!-- MAIN SLIDER -->
-<section id="main-slider" class="flexslider fullscreen" style="height: 887px;">
-    <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
-    <div class="slide-title-outter-wrapper">
 
-        <!-- MAIN SLIDER TITLE INNER WRAPPER -->
-        <div class="slide-title-inner-wrapper">
 
-            <!-- TITLE 2 -->
-            <div class="slide-title align-middle">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-offset-3 col-md-6 animation delay1 fadeInUp animated" style="visibility: visible;text-shadow: rgb(164 156 156 / 37%) 1px 1px;">
-                            <!-- <div class="banner-text withlove medium light" style="margin-top: 300px;">
-                                <h1 class="_font-main" style="font-size: 30px">이재국<br>
-                                    &<br>
-                                    안희수
-                                </h1>
-                            </div>
-                            <div id="banner-date">
-                                2025년 7월 12일 토요일 오후 5시<br>
-                                지타워컨벤션 2층 단독홀
-                            </div> -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- END of MAIN SLIDER TITLE INNER WRAPPER -->
-
-    </div> <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
-
-    <!-- MAIN SLIDER IMAGES -->
-    <ul class="slides">
-        <li class="flex-active-slide2" style="position: relative; opacity: 1; display: block; ">
-            <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(images/snt/wedding5.gif); background-position:top center">
-            </div>
-        </li>
-    </ul><!-- END of MAIN SLIDER IMAGES -->
-
-    <ul class="flex-direction-nav">
-        <li><a class="flex-prev flex-disabled" href="http://demo.dethemes.com/forever/versions/onepage/index.html#" tabindex="-1">Previous</a></li>
-        <li><a class="flex-next flex-disabled" href="http://demo.dethemes.com/forever/versions/onepage/index.html#" tabindex="-1">Next</a></li>
-    </ul>
-</section><!-- ENF of MAIN SLIDER -->
 
 
 <!--CONTENT SECTION-->
@@ -165,33 +118,23 @@
         <div class="container">
             <div class="row">
 
+                <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+                    <img src="images/snt/001.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                </div>
                 
-                <!-- SECTION TITLE -->
-                <div class="col-md-12 text-center">
-                    <div class="section-title animation fadeInUp" style="margin-top: 90px;margin-bottom: 90px">
-                         <img src="images/snt/diamond1.png" style="width:40px" alt="">
-                         <!-- <img src="https://self.cryucompany.com/flower-3.png" style="width:40px" alt=""> -->
-                         <p style="line-height: 39px;padding-top: 20px">
-                            저희 두 사람의 작은 만남이<br>
-                            사랑의 결실을 이루어<br>
-                            소중한 결혼식을 올리게 되었습니다.<br>
-                            <br>
-                            평생 서로 귀하게 여기며<br>
-                            첫 마음 그대로 존중하고 배려하며 살겠습니다.<br>
-                            오로지 믿음과 사랑을 약속하는 날<br>
-                            오셔서 축복해 주시면 더 없은 기쁨으로<br>
-                            간직하겠습니다.<br>
-                        </p>
-                    </div>
+                
+
+                <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+                    <img src="images/snt/002.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
                 </div>
 
                 <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
-                    <img src="images/snt/calander5.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                    <img src="images/snt/003.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
                 </div>
                 
 
 
-                <div class="col-xs-offset-1 col-xs-5 animation fadeIn animated" style="padding-right:5px;padding-left:0px;text-align:center;visibility: visible;line-height: 2em;border-right: solid 0.1px #e1e1e1; font-family: 'MapoFlowerIsland';">
+                <!-- <div class="col-xs-offset-1 col-xs-5 animation fadeIn animated" style="padding-right:5px;padding-left:0px;text-align:center;visibility: visible;line-height: 2em;border-right: solid 0.1px #e1e1e1; font-family: 'MapoFlowerIsland';">
                     <div style="margin-bottom: 30px">
                         <h3 style="margin-top: 0px;margin-bottom: 0px">신랑</h3>
                         <span>이운범 ・ 김영옥</span><span style="font-size: 10px"> 의 차남</span><br>
@@ -222,7 +165,7 @@
                         <img src="./images/snt/jeju/wife.jpg" alt="" >
                     </div>
                     
-                </div>
+                </div> -->
             </div>
             <!-- ROW-3 -->			
             <div class="row">
@@ -280,25 +223,31 @@
                     <!-- <h3 style="letter-spacing: -2px;">#뚜지와_태태태 #우리의_4계절 #프로포즈</h3> -->
                     <div class="slider-for">
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num1.jpg" alt="">
+                            <img src="images/snt/gallery/num00.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num2.jpg" alt="">
+                            <img src="images/snt/gallery/num11.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num3.jpg" alt="">
+                            <img src="images/snt/gallery/num22.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num4.jpg" alt="">
+                            <img src="images/snt/gallery/num33.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num5.jpg" alt="">
+                            <img src="images/snt/gallery/num44.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num6.jpg" alt="">
+                            <img src="images/snt/gallery/num55.jpg" alt="">
                         </div>
                         <div class="photo-item">
-                            <img src="images/snt/gallery/num7.jpg" alt="">
+                            <img src="images/snt/gallery/num66.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num77.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num88.jpg" alt="">
                         </div>
                         
                     </div>
@@ -653,9 +602,9 @@
                         <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
                             <br>
                             <h2 class="h4">신부측</h2>
-                            <p style="margin-bottom: 10px;">신한 110-470-516750 김수지
+                            <p style="margin-bottom: 10px;">케이뱅크 110-146-270042 안희수
                                 <br>
-                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(110470516750);">
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(100146270042);">
                                 <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej8DSAMaG')">
                             </p>
                             <br>
