@@ -4,6 +4,8 @@
     <style>
   html, body {
     background-color: #ffffff !important;
+    touch-action: manipulation; /* 더블탭 줌 방지 */
+    overscroll-behavior: none;  /* iOS에서 땡김 스크롤 방지 */
   }
 
   /* 배경 이미지/색이 지정된 섹션들 초기화 */
@@ -54,7 +56,9 @@
     <meta property="og:image:height" content="1200" />
     <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
 
 
     <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
@@ -707,6 +711,28 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.appendChild(overlay);
   });
 });
+</script>
+
+<script>
+  // Google 앱 웹뷰에서도 Ctrl+줌 또는 핀치줌 방지
+  document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gestureend', function (e) {
+    e.preventDefault();
+  });
+
+  // Android 구글앱에서 핀치줌 차단 (터치 2개 이상 시 막기)
+  document.addEventListener('touchmove', function (e) {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 </script>
 
 
