@@ -53,7 +53,8 @@
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="1200" />
     <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 
     <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
@@ -120,6 +121,25 @@
             });
         }
     </script>
+
+<script>
+  // 마우스 휠 + Ctrl 줌 방지
+  window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // 키보드 단축키 확대 (Ctrl + +/-) 방지
+  window.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+
 </head>
 
 <body oncontextmenu="return false;" class="outside-bottom-bar-page pace-done" >
