@@ -107,10 +107,46 @@
 <!--<div id="snow-bg" class="bg-eff-base fall-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">-->
 <!--</div>-->
 
-<audio autoplay loop muted>
+<!-- <audio autoplay loop muted>
   <source src="images/song1.m4a" type="audio/mp4">
+</audio> -->
 
-</audio>
+
+<!-- <audio autoplay loop muted>
+  <source src="https://noodlemarriage.github.io/wide/images/song1.m4a" type="audio/mp4">
+</audio> -->
+
+  <!-- 🎵 배경 음악 (초기엔 muted로 시작) -->
+  <audio id="bgm" autoplay loop muted>
+    <source src="images/song2.mp3" type="audio/mpeg">
+    브라우저가 오디오 태그를 지원하지 않습니다.
+  </audio>
+
+  <!-- 콘텐츠 -->
+  <div style="text-align: center; padding: 100px;">
+    <h1>이재국 ❤️ 안희수의 결혼식에 초대합니다</h1>
+    <p>스크롤하면 배경음악이 재생됩니다 🎵</p>
+    <div style="height: 2000px;"></div> <!-- 스크롤 테스트용 -->
+  </div>
+
+  <!-- 🎯 스크롤 시 소리 켜기 -->
+  <script>
+    const audio = document.getElementById('bgm');
+    let played = false;
+
+    const enableAudioOnScroll = () => {
+      if (!played) {
+        audio.muted = false;
+        audio.play();
+        played = true;
+        window.removeEventListener('scroll', enableAudioOnScroll);
+      }
+    };
+
+    window.addEventListener('scroll', enableAudioOnScroll);
+  </script>
+
+
 
 
 
