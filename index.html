@@ -23,6 +23,25 @@
   .sakura {
     display: none !important;
   }
+
+
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+
+
+
+
 </style>
     <title>이재국 ❤️ 안희수 의 결혼식에 초대합니다.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -103,7 +122,7 @@
     </script>
 </head>
 
-<body class="outside-bottom-bar-page pace-done" >
+<body oncontextmenu="return false;" class="outside-bottom-bar-page pace-done" >
 <!--<div id="snow-bg" class="bg-eff-base fall-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">-->
 <!--</div>-->
 
@@ -631,5 +650,46 @@ line-height: 22px;
     text-align: center;">
     <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2025. <a href="https://noodlemarriage.github.io/wide" style="text-decoration: underline;font-size: 12px" target="_blank">JGLee</a>. All rights reserved.</div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img");
+
+  images.forEach(img => {
+    // 부모가 wrapper인지 확인 (중복 방지)
+    if (img.parentNode.classList.contains("image-wrapper")) return;
+
+    // 래퍼 div 생성
+    const wrapper = document.createElement("div");
+    wrapper.className = "image-wrapper";
+    wrapper.style.position = "relative";
+    wrapper.style.display = "inline-block";
+
+    // 투명 오버레이 생성
+    const overlay = document.createElement("div");
+    overlay.className = "image-overlay";
+    overlay.style.position = "absolute";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.zIndex = "2";
+    overlay.style.background = "url('images/transparent-layer.png')";
+
+    // 이미지 스타일 설정
+    img.style.pointerEvents = "none";
+    img.style.userSelect = "none";
+    img.style.webkitUserDrag = "none";
+
+    // 이미지 래핑
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+    wrapper.appendChild(overlay);
+  });
+});
+</script>
+
+
+
 </body>
 </html>
