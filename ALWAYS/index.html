@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <style>
+  html, body {
+    background-color: #ffffff !important;
+    touch-action: manipulation; /* 더블탭 줌 방지 */
+    overscroll-behavior: none;  /* iOS에서 땡김 스크롤 방지 */
+  }
+
+  /* 배경 이미지/색이 지정된 섹션들 초기화 */
+  section,
+  .fullscreen,
+  .flexslider,
+  .slide-image,
+  #main-slider,
+  .slide-title-outter-wrapper,
+  .slide-title-inner-wrapper {
+    background: none !important;
+    background-color: transparent !important;
+  }
+
+  /* snow 효과, sakura 효과 강제 비활성화 (테스트용) */
+  #snow-bg,
+  .sakura {
+    display: none !important;
+  }
+
+
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+  
+  button.button-img-cp {
+  all: unset;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+
+
+
+</style>
+    <title>이재국 ❤️ 안희수 의 결혼식에 초대합니다.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta property="og:image" content="https://noodlemarriage.github.io/wide/images/snt/view1.jpg"/>
+    <meta property="og:url" content="https://noodlemarriage.github.io/wide"/>
+    <meta property="og:description" content="2025.07.12 오후 5시 지타워 컨벤션 2층 단독홀"/>
+    <meta property="og:title" content="이재국❤️안희수의 결혼식에 초대합니다."/>
+    <meta property="og:type" content="article" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="1200" />
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+
+
+    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+    <link rel="stylesheet" href="./resources/snow.css">
+    <link rel="stylesheet" href="./resources/font.css">
+    <link rel="icon" href="./images/favicon.jpeg">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./resources/bootstrap.min.css" type="text/css" media="screen">
+    <!-- Pace -->
+    <link rel="stylesheet" href="./resources/preloader.css" media="screen">
+    <link rel="stylesheet" href="./resources/preloader-default.css" media="screen">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="./resources/flexslider.css" type="text/css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="./resources/animate.css" type="text/css">
+    <!-- Countdown -->
+    <link rel="stylesheet" href="./resources/jquery.countdown.css" type="text/css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./resources/magnific-popup.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./resources/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="./resources/owl.theme.css" type="text/css">
+    <!-- Icon -->
+    <link rel="stylesheet" href="./resources/fontello.css" type="text/css" media="screen">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="./resources/style.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="./resources/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="./resources/slick.css" type="text/css">
+
+    <style data-emotion="css" data-s=""></style>
+    <link rel="stylesheet skin" href="./resources/coral.css" type="text/css">
+    <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=auuzywcc3p"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQDXR28SS0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BQDXR28SS0');
+    </script>
+	
+	<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+        // 카카오 초기화
+        Kakao.init('d6c49aa837f08d33b0a9f3d63aec9bef'); // 발급받은 JavaScript 키 입력
+
+        function shareKakao() {
+            Kakao.Link.sendCustom({
+                templateId: 120525,  // 카카오 디벨로퍼스에서 만든 템플릿 ID 입력
+                templateArgs: {
+                    'title': '이재국 ❤️ 안희수 결혼합니다!',
+                    'description': '2025년 7월 12일 (토) 오후 5시 지타워컨벤션 2층 단독홀 ',
+                    'imageUrl': 'https://noodlemarriage.github.io/wide/images/snt/view1.jpg',
+                    'webUrl': 'https://noodlemarriage.github.io/wide'
+                }
+            });
+        }
+    </script>
+
+<script>
+  // 마우스 휠 + Ctrl 줌 방지
+  window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // 키보드 단축키 확대 (Ctrl + +/-) 방지
+  window.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+
+</head>
+
+<body oncontextmenu="return false;" class="outside-bottom-bar-page pace-done" >
+<!--<div id="snow-bg" class="bg-eff-base fall-bg" style="top:0px;width: 100vw;height: 8500px;z-index: 999">-->
+<!--</div>-->
+
+<!-- 투명 레이어 추가 -->
+  <!-- <img src="images/transparent-layer.png" style=" -->
+    <!-- position: fixed; -->
+    <!-- top: 0; -->
+    <!-- left: 0; -->
+    <!-- width: 100vw; -->
+    <!-- height: 100vh; -->
+    <!-- z-index: 1; -->
+    <!-- pointer-events: none; -->
+  <!-- "> -->
+
+<audio id="bgm" loop>
+  <source src="images/song2.mp3" type="audio/mpeg">
+  브라우저가 오디오 태그를 지원하지 않습니다.
+</audio>
+
+<script>
+  const audio = document.getElementById('bgm');
+  audio.volume = 0.3;
+  let played = false;
+
+  function startAudio() {
+    if (!played) {
+      audio.currentTime = 0;        // ⏮ 음악 처음부터
+      audio.muted = false;          // 🔊 음소거 해제
+      audio.play().then(() => {
+        played = true;
+        console.log("음악 재생 성공!");
+        window.removeEventListener('scroll', startAudio);
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('touchstart', startAudio);
+      }).catch((err) => {
+        console.log("재생 실패:", err);
+      });
+    }
+  }
+
+  // 사용자 상호작용 이벤트들 (스크롤 + 클릭 + 터치)
+  window.addEventListener('scroll', startAudio);
+  document.addEventListener('click', startAudio);
+  document.addEventListener('touchstart', startAudio);
+</script>
+
+
+
+
+<!--CONTENT SECTION-->
+<section id="content">
+    <section id="map">
+        <div class="container">
+            <div class="row">
+
+                <div style="text-align: center;  margin-bottom: 30px">
+                    <img src="images/snt/rollup1.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                </div>
+                
+                
+
+                <!-- <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+                    <img src="images/snt/002.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+                    <img src="images/snt/003.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                </div> -->
+                
+
+
+                <!-- <div class="col-xs-offset-1 col-xs-5 animation fadeIn animated" style="padding-right:5px;padding-left:0px;text-align:center;visibility: visible;line-height: 2em;border-right: solid 0.1px #e1e1e1; font-family: 'MapoFlowerIsland';">
+                    <div style="margin-bottom: 30px">
+                        <h3 style="margin-top: 0px;margin-bottom: 0px">신랑</h3>
+                        <span>이운범 ・ 김영옥</span><span style="font-size: 10px"> 의 차남</span><br>
+                        <span style="margin-bottom: 50px">이 재 국</span><br>
+                        <span style="font-size: 10px">94년 2월 1일</span><br>
+                        <span style="font-size: 13px">IT 개발자 🖥️</span><br>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px">저희 행복하게</span><br>
+                    </div>
+                    <div class="photo-item fadeInUp animated" style="visibility: visible;object-fit: cover;border-radius: 50%;;margin:auto;max-width: 200px">
+                        <img src="./images/snt/jeju/husband.png" alt="" >
+                    </div>
+                    
+                </div>
+                <div class="col-xs-5 animation fadeIn animated" style="padding-right:0px;padding-left:5px;text-align:center;visibility: visible;line-height: 2em;font-family: 'MapoFlowerIsland'">
+                    <div style="margin-bottom: 30px">
+                        <h3 style="margin-top: 0px;margin-bottom: 0px">신부</h3>
+                        <span>안복남 ・ 신수정</span><span style="font-size: 10px"> 의 장녀</span><br>
+                        <span style="margin-bottom: 50px">안 희 수</span><br>
+                        <span style="font-size: 10px">95년 12월 19일</span><br>
+                        <span style="font-size: 13px">IT 기획자 📝</span>
+                    </div>
+                    <div>
+                        <span style="font-size: 14px">잘 살겠습니다 :)</span><br>
+                    </div>
+                    <div class="photo-item fadeInUp animated" style="visibility: visible;object-fit: cover;border-radius: 50%;margin:auto;max-width: 200px">
+                        <img src="./images/snt/jeju/wife.jpg" alt="" >
+                    </div>
+                    
+                </div> -->
+            </div>
+            <!-- ROW-3 -->			
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center" style="padding-top: 10px">
+                    <!-- <div style="margin-top: 20px;margin-bottom: 60px">
+                        <span style="font-family: 'MapoFlowerIsland'">찬란한 여름<br>소중한 분들을 초대합니다.</span>
+                    </div> -->
+                    <h3 class="inline">오시는 길</h3>
+                    <div style="margin-top: 20px">
+                        <span style="font-family: 'MapoFlowerIsland'">서울 구로구 디지털로26길 38, 지타워컨벤션</span>
+                    </div>
+                </div>
+                <div class="col-md-offset-2 col-md-8 animation fadeIn animated" style="visibility: visible;padding-top: 10px; padding-bottom: 30px">
+                    <div style="margin-top: 20px; position: relative; overflow: hidden;">
+                        <div id="map-canvas" style="width:100%;height:400px;"></div>
+                        <div data-aos="fade-up" style="font-size:14px;font-weight:bold;padding-top:20px;padding-bottom:20px;display:flex;align-items:center;justify-content:center"
+                             class="aos-init aos-animate">
+                            <a href="https://place.map.kakao.com/197749949" target="_blank">
+                                <div style="display:flex;align-items:center;justify-content:center;padding:0px 5px;margin-right: 10px">
+                                    <img src="https://play-lh.googleusercontent.com/Nvrf8Z89_3S8H6YnOLgyAbe-PSSeCZnJDA8zv7LY04hEvi8atTgp_fmQ5RZ591Qpxh5G=w480-h960-rw" style="width:30px;border-radius: 20%;margin-right: 5px">
+                                    <span>카카오맵</span>
+                                </div>
+                            </a>
+                            <a href="https://map.naver.com/p/entry/place/1090437805?c=15.00,0,0,0,dh" target="_blank">
+                                <div style="display:flex;align-items:center;justify-content:center;padding:0px 5px;padding-right:10px">
+                                    <img src="https://play-lh.googleusercontent.com/yB6ePH3QA0EMU8qTqM5tOPtpZ8bZeIYhb9Oi2RHOy9YvK5fdxIlbN1H46QtdHNC_1g=w480-h960-rw" style="width:30px;border-radius: 20%;margin-right: 5px">
+                                    <span>네이버 지도</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+                        <img src="images/snt/map3.png" alt="추가 이미지" style="max-width: 100%; height: auto;">
+                    </div>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center">
+                    <div class="section-title animation fadeInUp animated" style="visibility: visible;padding-top: 70px;">
+                        <h3 class="inline">갤러리</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slider-wrap col-md-offset-3 col-md-6 text-center" style="margin-bottom: 100px;">
+                    <!-- <h3 style="letter-spacing: -2px;">#뚜지와_태태태 #우리의_4계절 #프로포즈</h3> -->
+                    <div class="slider-for">
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num000.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num11.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num22.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num33.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num44.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num55.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num66.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num777.jpg" alt="">
+                        </div>
+                        <div class="photo-item">
+                            <img src="images/snt/gallery/num88.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="slider-nav">
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num000.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num11.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num22.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num33.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num44.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num55.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num66.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num777.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/num88.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/8.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/9.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/10.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/11.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/12.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-item">
+                            <div>
+                                <div style="width: 50px; height:50px;display: inline-block;">
+                                    <div class="cover"></div>
+                                    <div class="thum" style="background-image:url(images/snt/gallery/1/retouching/13.jpg)"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="contact">
+        <div class="image-divider auto-height" style="padding-bottom: 100px;padding-top: 100px;">
+
+            <div class="divider-overlay"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <div class="text-center animation fadeInUp animated" style="visibility: visible;font-family: 'MapoFlowerIsland'">
+                            <h4 style="font-family: 'MapoFlowerIsland'">마음 전하실 곳</h4><br>
+                            멀리서도 축하의 마음을<br>
+                            전하고 싶으신 분들을 위해<br>
+                            계좌번호를 안내드립니다.<br>
+                            <br>
+                            소중한 축하를 보내주셔서 감사드리며,<br>
+                            따뜻한 마음에 깊이 감사드립니다.<br>
+                        </div>
+                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
+                            <h2 class="h4">신랑측</h2>
+                            <p style="margin-bottom: 10px;">케이뱅크 777-008-345968 이재국
+                                <br>
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(777008345968);">
+                                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FT2rGB9eH')">
+                            </p>
+                            <p style="margin-bottom: 10px;">국민은행 493625-92-105183 김영옥(혼주)
+                                <br>
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(49362592105183);">
+                            </p>
+                        </div>
+                        <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
+                            <br>
+                            <h2 class="h4">신부측</h2>
+                            <p style="margin-bottom: 10px;">케이뱅크 110-146-270042 안희수
+                                <br>
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(100146270042);">
+                                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/FRnYlw9WS')">
+                            </p>
+                            <p style="margin-bottom: 10px;">우체국 104976-02-228486 신수정(혼주)
+                                <br>
+                                <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(10497602228486);">
+                                <img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="window.open('https://qr.kakaopay.com/Ej712UkcR')">
+                            </p>
+                            <br>
+                        </div>
+                        <div class="text-center animation fadeInUp animated" style="visibility: visible;font-family: 'MapoFlowerIsland'">
+                            복에 복을 더하는<br>
+                            복된가정 되도록 축복해주세요.<br>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section> -->
+
+    <div style="position: relative; z-index: 9999; text-align: center; margin-top: 30px; margin-bottom: 30px">
+        <img src="images/last1.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+        <p style="margin-bottom: 10px;">
+            <button class="button-img-cp" onclick="copy_to_clipboard(100158989661);"> 
+			    <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+			<button class="button-img-cp" onclick="window.open('https://qr.kakaopay.com/FT2rGB9eH')"> 
+				<img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+        </p>
+
+        <img src="images/last2.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+        <p style="margin-bottom: 10px;">
+			<button class="button-img-cp" onclick="copy_to_clipboard(3561136704223);"> 
+				<img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+        </p>
+
+        <img src="images/last3.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+        <p style="margin-bottom: 10px;">
+			<button class="button-img-cp" onclick="copy_to_clipboard(100146270042);"> 
+			    <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+			<button class="button-img-cp" onclick="window.open('https://qr.kakaopay.com/FRnYlw9WS')"> 
+				<img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+        </p>
+
+        <img src="images/last4.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+        <p style="margin-bottom: 10px;">
+			<button class="button-img-cp" onclick="copy_to_clipboard(10497602228486);"> 
+			    <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+			<button class="button-img-cp" onclick="window.open('https://qr.kakaopay.com/Ej712UkcR')"> 
+				<img src="https://i.imgur.com/pdLL0dT.png" style="width: 60px;cursor: pointer;border-radius: 4px;">
+			</button>
+        </p>
+    </div>
+	
+    <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+        <img src="images/last5.jpg" alt="추가 이미지" style="max-width: 100%; height: auto;">
+    </div>
+	
+	<div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+
+		<button 
+        id="kakao-share-btn" 
+        onclick="shareKakao()" 
+        style="max-width: 100%; height: auto; text-align: center;">
+		
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" 
+             alt="카카오톡 로고" 
+             style="width: 60px; height: 60px; margin-bottom: 5px;">
+        <br>공유하기
+		
+        </button>
+    </div>
+
+</section>
+
+<!-- jQuery -->
+<script src="./resources/jquery-1.11.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<script type="text/javascript" charset="UTF-8" src="./resources/jquery-sakura.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Pace -->
+<script src="./resources/pace.min.js"></script>
+<!-- Bootstrap -->
+<script src="./resources/bootstrap.js"></script>
+<!-- Modernizr -->
+<script src="./resources/modernizr.js"></script>
+<!-- Device JS -->
+<script src="./resources/device.js"></script>
+<!-- TinyNav -->
+<script src="./resources/tinynav.min.js"></script>
+<!-- SmoothScroll -->
+<script src="./resources/jquery.smooth-scroll.js"></script>
+<!-- Flexslider -->
+<script src="./resources/jquery.flexslider.js"></script>
+<!-- Sticky -->
+<script src="./resources/jquery.sticky.js"></script>
+<!-- Waypoint -->
+<script src="./resources/jquery.waypoints.min.js"></script>
+<!-- DoubleTapToGo -->
+<script src="./resources/jquery.ui.widget.js"></script>
+<script src="./resources/jquery.dcd.doubletaptogo.js"></script>
+<!-- Vide -->
+<script src="./resources/jquery.vide.js"></script>
+<!-- Stellar -->
+<script src="./resources/jquery.stellar.js"></script>
+<!-- Masonry -->
+<script src="./resources/masonry.pkgd.min.js"></script>
+<!-- Countdown -->
+<script src="./resources/jquery.plugin.js"></script>
+<script src="./resources/jquery.countdown.js"></script>
+<!-- Magnific Popup -->
+<script src="./resources/jquery.magnific-popup.js"></script>
+<!-- Owl Carousel -->
+<script src="./resources/owl.carousel.js"></script>
+<!-- Google Map -->
+<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+<!--<script src="./resources/markerwithlabel.js"></script>-->
+<!-- RSVP -->
+<script src="./resources/rsvp.js"></script>
+
+<!-- Custom Core Script -->
+<script type="text/javascript" src="./resources/script.js"></script>
+<!--<script type="text/javascript" src="./resources/map-script.js"></script>-->
+<!-- Custom Additional Script -->
+<script type="text/javascript" src="./resources/main-slider-fade.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+    });
+
+    function copy_to_clipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("복사되었습니다.");
+        });
+    }
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.479604, 126.895539),
+        zoom: 14
+    };
+
+    var map = new naver.maps.Map('map-canvas', mapOptions);
+    var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.479604, 126.895539),
+        map: map
+    });
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        adaptiveHeight: true,
+        asNavFor: '.slider-nav',
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        forThum : true,
+        focusOnSelect: true
+    });
+
+    $('.slider-for2').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        adaptiveHeight: true,
+        asNavFor: '.slider-nav2',
+    });
+    $('.slider-nav2').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for2',
+        forThum : true,
+        focusOnSelect: true
+    });
+
+
+
+
+</script>
+
+<div class="copyright-wrap" style="
+margin: 0 auto;
+    width: 80%;
+    min-width: 280px;
+    font-size: 10px;
+    color: #000000;
+    letter-spacing: .3px;
+    font-family: Castoro,serif;
+line-height: 22px;
+    text-align: center;">
+    <div class="copyright" style="padding-top: 20px;padding-bottom: 20px;">Copyright 2025. <a href="https://noodlemarriage.github.io/wide" style="text-decoration: underline;font-size: 12px" target="_blank">JGLee</a>. All rights reserved.</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img");
+
+  images.forEach(img => {
+    // 부모가 wrapper인지 확인 (중복 방지)
+    if (img.parentNode.classList.contains("image-wrapper")) return;
+
+    // 래퍼 div 생성
+    const wrapper = document.createElement("div");
+    wrapper.className = "image-wrapper";
+    wrapper.style.position = "relative";
+    wrapper.style.display = "inline-block";
+
+    // 투명 오버레이 생성
+    const overlay = document.createElement("div");
+    overlay.className = "image-overlay";
+    overlay.style.position = "absolute";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.zIndex = "2";
+    overlay.style.background = "url('images/transparent-layer.png')";
+
+    // 이미지 스타일 설정
+    img.style.pointerEvents = "none";
+    img.style.userSelect = "none";
+    img.style.webkitUserDrag = "none";
+
+    // 이미지 래핑
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+    wrapper.appendChild(overlay);
+  });
+});
+</script>
+
+<script>
+  // Google 앱 웹뷰에서도 Ctrl+줌 또는 핀치줌 방지
+  document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gesturechange', function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener('gestureend', function (e) {
+    e.preventDefault();
+  });
+
+  // Android 구글앱에서 핀치줌 차단 (터치 2개 이상 시 막기)
+  document.addEventListener('touchmove', function (e) {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
+
+
+
+</body>
+</html>
